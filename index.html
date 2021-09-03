@@ -2,13 +2,33 @@
 title: Home
 layout: default
 ---
-<h1>Team Xvenom</h1>
+<div class="display-1">Team Xvenom</div>
+<div class="display-6 text-muted">Welcome to the den</div>
 
-<h2>Welcome to the den</h2>
+<div class="mt-5 lead">
+  <p><strong>What is this?</strong></p>
+  <p>
+  If you do not know, then you are not supposed to be here.
+  But feel free to explore the posts. We hope you find
+  something useful there.
+  </p>
+</div>
 
-<h3>What is this?</h3>
-<p>
-If you do not know, then you are not supposed to be here.
-But feel free to explore the posts. We hope you might find
-something useful there.
-</p>
+<div class="mt-5">
+  <p class="lead"><strong>Latest content</strong></p>
+
+  <div class="row g-5">
+    {% assign new_posts = site.posts | slice:0,3 %}
+    {% for post in new_posts %}
+    <div class="col p-3">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{ post.title }}</h5>
+          <p class="card-text">By {{ post.author }}</p>
+          <a href="{{ post.url }}" class="btn btn-outline-dark">Read</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
