@@ -1,8 +1,4 @@
 collections:
-# Has directory /_topics
-  topics:
-    # To output pages for each topic
-    output: true
   authors:
     output: true
 
@@ -19,13 +15,12 @@ defaults:
       layout: "post"
   - scope:
       path: ""
-      type: "topics"
-    values:
-      layout: "topic"
-  - scope:
-      path: ""
     values:
       layout: "default"
 
 domain: terxor.github.io
 url: https://terxor.github.io
+
+markdown: kramdown
+kramdown:
+  math-engine: katex

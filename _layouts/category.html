@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+{% assign category = site.data.categories[page.category_id] %}
+{% assign posts = site.categories[page.category_id] %}
+
+<h1>{{ category.name }}</h1>
+<p>{{ category.desc }}</p>
+
+<h2>Posts</h2>
+
+<div>
+  {% for post in posts %}
+    {% include post-list-element.html %}
+  {% endfor %}
+</div>

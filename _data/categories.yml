@@ -1,0 +1,6 @@
+misc:
+  name: "Miscellaneous"
+  desc: "Posts that do not fall into other categories"
+cp:
+  name: "Competitive Programming"
+  desc: "Posts related to algorithms, methods used in programming problems"

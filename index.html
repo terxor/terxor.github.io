@@ -26,12 +26,11 @@ layout: default
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">{{ post.title }}</h5>
-          <p class="card-text">By <em>{{ post.author }}</em></p>
+          <p class="card-text">By <strong>{{ post.author }}</strong></p>
           <a href="{{ post.url }}" class="btn btn-outline-dark">Read</a>
         </div>
         <div class="card-footer">
-          {% assign topic = site.topics | find: "topic_id", post.topic %}
-          Category: {{ topic.name }}
+          <em>{{ site.data.categories[post.category].name }}</em>
         </div>
       </div>
     </div>

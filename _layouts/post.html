@@ -3,14 +3,13 @@ layout: default
 ---
 
 <div class="display-6">{{ page.title }}</div>
-<p>
+<div>
   by 
   <strong>{{ page.author }}</strong>
   on {{ page.date | date_to_string }}
-</p>
+</div>
 <p class="text-muted">
-{% assign topic = site.topics | find: "topic_id", page.topic %}
-<small>{{ topic.name }}</small>
+<small>{{ site.data.categories[page.category].name }}</small>
 </p>
 <hr/>
 {{ content }}

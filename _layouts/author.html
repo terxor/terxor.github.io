@@ -17,14 +17,6 @@ layout: default
 <div>
   {% assign filtered_posts = site.posts | where: 'author', page.alias %}
   {% for post in filtered_posts %}
-    <div class="mt-4">
-      <h4 class="blog-post-title">{{ post.title }}</h4>
-      <div> on {{ post.date | date_to_string }} </div>
-      {% assign topic = site.topics | find: "topic_id", post.topic %}
-      <div class="blog-post-category text-muted">in {{ topic.name }}</div>
-      <div class="blog-post-link">
-        <a href="{{ post.url }}">Read</a>
-      </div>
-    </div>
+    {% include post-list-element.html %}
   {% endfor %}
 </div>

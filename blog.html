@@ -6,16 +6,6 @@ title: Blog
 
 <div>
   {% for post in site.posts %}
-    <div class="mt-4">
-      <h4 class="blog-post-title">{{ post.title }}</h4>
-      <div class="blog-post-author">
-        by <strong>{{ post.author }}</strong> on {{ post.date | date_to_string }}
-      </div>
-      {% assign topic = site.topics | find: "topic_id", post.topic %}
-      <div class="blog-post-category text-muted">in {{ topic.name }}</div>
-      <div class="blog-post-link">
-        <a href="{{ post.url }}">Read</a>
-      </div>
-    </div>
+    {% include post-list-element.html %}
   {% endfor %}
 </div>

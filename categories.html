@@ -1,0 +1,20 @@
+---
+layout: default
+title: Categories
+---
+
+<h1>Categories</h1>
+
+<div>
+  {% for raw_category in site.categories %}
+    {% assign category_id = raw_category | first %}
+    {% assign category = site.data.categories[category_id] %}
+    {% if category %}
+    <div class="mt-4">
+      <h4>{{ category.name }}</h4>
+      <div>{{ category.desc }}</div>
+      <div> <a href="/categories/{{ category_id }}">Posts</a> </div>
+    </div>
+    {% endif %}
+  {% endfor %}
+</div>
