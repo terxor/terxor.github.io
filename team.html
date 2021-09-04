@@ -4,13 +4,22 @@ layout: default
 
 <h1>Team</h1>
 
-<ul>
+<div class="row">
   {% assign authors = site.authors | sort:"rank" %}
   {% for author in authors %}
-    <li>
-      <h2><a href="{{ author.url }}">{{ author.alias }}</a></h2>
-      <h3>{{ author.name }}</h3>
-      <p>{{ author.content | markdownify }}</p>
-    </li>
+    <div class="col-4 p-3">
+      <div class="card">
+        <div class="card-body">
+          <div class="float-end">
+            <img src="/assets/images/{{ author.alias }}.jpg" class="author-pic img-thumbnail" alt="...">
+          </div>
+          <div class="float-start">
+            <h5 class="card-title">{{ author.alias }}</h5>
+            <p class="card-text">{{ author.name }}</p>
+            <a href="{{ author.url }}" class="btn btn-outline-dark">Posts</a>
+          </div>
+        </div>
+      </div>
+    </div>
   {% endfor %}
-</ul>
+</div>

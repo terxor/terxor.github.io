@@ -4,14 +4,22 @@ layout: default
 
 <h1>{{ page.name }}</h1>
 
-<p>ID: {{ page.topic_id }}</p>
-
 {{ content }}
 
 <h2>Posts</h2>
-<ul>
+
+<div>
   {% assign filtered_posts = site.posts | where: 'topic', page.topic_id %}
   {% for post in filtered_posts %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    <div class="mt-4">
+      <h4>{{ post.title }}</h4>
+      <div>
+        by <strong>{{ post.author }}</strong> on {{ post.date | date_to_string }}
+      </div>
+      {% assign topic = site.topics | find: "topic_id", post.topic %}
+      <div>
+        <a href="{{ post.url }}">Read</a>
+      </div>
+    </div>
   {% endfor %}
-</ul>
+</div>

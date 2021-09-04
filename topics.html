@@ -5,14 +5,12 @@ title: Categories
 
 <h1>Categories</h1>
 
-<ul>
+<div>
   {% for topic in site.topics %}
-    <li>
-      <h3>{{ topic.name }}</h3>
-      <a href="{{ topic.url }}">Link</a>
-      <p>
-        {{ topic.content | markdownify }}
-      </p>
-    </li>
+    <div class="mt-4">
+      <h4>{{ topic.name }}</h4>
+      <div>{{ topic.content | markdownify }}</div>
+      <div> <a href="{{ topic.url }}">Posts</a> </div>
+    </div>
   {% endfor %}
-</ul>
+</div>

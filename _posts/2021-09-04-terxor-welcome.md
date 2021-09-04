@@ -1,0 +1,17 @@
+---
+author: terxor
+title: Welcome
+topic: misc
+---
+
+Welcome to our collective blog.
+
+This is primarily meant for use as an easily accessible place
+for sharing thoughts, notes or any other stuff in form of blog posts.
+
+This blog is definitely not meant for promoting or publicizing anything.
+
+Blog posts:
+- You can view all posts on *Blog* page.
+- You can view posts based on category or topic on *Categories* page.
+- You can view posts of an author through the *Team* page.

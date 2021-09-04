@@ -5,12 +5,14 @@ layout: default
 <div class="display-1">Team Xvenom</div>
 <div class="display-6 text-muted">Welcome to the den</div>
 
+<hr/>
+
 <div class="mt-5 lead">
   <p><strong>What is this?</strong></p>
   <p>
-  If you do not know, then you are not supposed to be here.
-  But feel free to explore the posts. We hope you find
-  something useful there.
+    This is a collective blog with no intention of publicity.
+    Feel free to explore the posts.
+    We hope you find something useful here.
   </p>
 </div>
 
@@ -20,15 +22,21 @@ layout: default
   <div class="row g-5">
     {% assign new_posts = site.posts | slice:0,3 %}
     {% for post in new_posts %}
-    <div class="col p-3">
-      <div class="card" style="width: 18rem;">
+    <div class="col-4 p-3">
+      <div class="card">
         <div class="card-body">
           <h5 class="card-title">{{ post.title }}</h5>
-          <p class="card-text">By {{ post.author }}</p>
+          <p class="card-text">By <em>{{ post.author }}</em></p>
           <a href="{{ post.url }}" class="btn btn-outline-dark">Read</a>
+        </div>
+        <div class="card-footer">
+          {% assign topic = site.topics | find: "topic_id", post.topic %}
+          Category: {{ topic.name }}
         </div>
       </div>
     </div>
     {% endfor %}
   </div>
 </div>
+
+<hr/>
