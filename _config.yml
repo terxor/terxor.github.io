@@ -26,3 +26,6 @@ defaults:
       path: ""
     values:
       layout: "default"
+
+domain: terxor.github.io
+url: https://terxor.github.io
