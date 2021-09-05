@@ -24,3 +24,5 @@ url: https://terxor.github.io
 markdown: kramdown
 kramdown:
   math-engine: katex
+  input: GFM
+  syntax_highlighter: rouge
