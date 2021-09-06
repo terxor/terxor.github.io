@@ -27,3 +27,15 @@ footer {
   height: 200px;
   width: 200px;
 }
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #95ccf1;
+  padding: 5px;
+  padding-left: 15px;
+}
+
+div > pre.highlight {
+  border-left: 5px solid #ccc;
+  padding-left: 5px;
+}
