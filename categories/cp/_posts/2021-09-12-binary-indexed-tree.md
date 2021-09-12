@@ -20,7 +20,7 @@ We illustrate the concept of BIT through the following example:
 
 Let $A_1, \ldots, A_N$ be an array of integers.
 There are two types of queries:
-1. **Range query**: Given index $i$, find $i$-th prefix sum, i.e, $A_1 + \ldots A_i$
+1. **Range query**: Given index $i$, find $i$-th prefix sum, i.e, $A_1 + \ldots + A_i$
 2. **Point update**: Given index $i$ and value $s$ do: $A_i \leftarrow A_i + s$
 
 Assume that there can be a large number of these queries.
