@@ -61,7 +61,7 @@ Find a sequence of operations such that vertex $i$ has value $i$ with number of 
 not exceeding $\frac{N \cdot (N - 1)}{2}$.
 
 > The original problem gives a permutation and pair of indices that can be swapped and asks for
-  a sequences of operations to sort the permutation. It is reducible to the problem stated above.
+  a sequence of operations to sort the permutation. It is reducible to the problem stated above.
 
 **Solution**
 

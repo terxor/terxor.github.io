@@ -5,8 +5,6 @@ category: cp
 katex: true
 ---
 
-## Prime Numbers
-
 An integer $p$ is a prime number if
 - $p > 1$
 - No integer $q$ such that $q > 1$ and $q \neq p$ divides $p$
@@ -33,7 +31,7 @@ Number of prime numbers less than $10^x$:
 
 - Sum of reciprocals of primes up to $n$ is $\approx \ln{\ln{n}}$
 
-## Finding primes - Seive of Eratothenes
+### Finding primes - Seive of Eratothenes
 
 To find all primes upto $N$:
 1. Write down integers from $2$ to $N$
